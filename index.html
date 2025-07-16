@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+
+
+
+  <title>JavaScriptの基本構文や特徴について解説!</title>
+  
+</head>
+<body>
+  <nav class="menu">
+  <ul>
+    <li><a href="#intro">JavaScriptとは？</a></li>
+    <li><a href="#syntax">基本構文</a></li>
+    <li><a href="#feature">特徴と得意分野</a></li>
+    <li><a href="#uses">使われているもの</a></li>
+    <li><a href="#conclusion">さいごに</a></li>
+    <li><a href="#quotation">参考文献</a></li>
+  </ul>
+</nav>
+
+  <h1>JavaScriptの基本構文や特徴などについて調べました!</h1>
+
+  <h2  id="intro"><span>まず初めに JavaScriptとは?</span></h2>
+  <p>JavaScript（ジャバスクリプト）とは、Webサイトやシステムの開発などに使われているオブジェクト指向のプログラミング言語</br>
+    のことで、私たちが普段目にしているWebサイトの多くは、JavaScriptが使われて作成されています。</br>
+    例えば、Webサイトを見ているとき、ポップアップ広告や画像が横に流れていくなど、Webサイト上で</br>
+    アニメーションが動いていることがあると思います。 あのようなブラウザ上での動きに対して指示を出し</br>
+    ているプログラミング言語がJavaScriptです。また、こういったWebサイトに動きを付けるためのもので</br>
+    あったJavaScriptも、最近ではサーバーサイド、スマホアプリ、デスクトップアプリの開発にも使われています。</p>
+
+  <h2 id="syntax"><span>JavaScriptの基本構文</span></h2>
+  <h3><span>1.デバックメッセージを表示する</span></h3>
+  <p>開発者ツールにメッセージを表示するには以下の様なコードを書きます。</br>
+    <code>console.log('Hello World');</code></br>
+    シングルクォーテーションで囲まれた内容が開発者ツールに表示されます。</br>
+    「変数aが定義されていません」など、プログラムの状況が分かるようなメッセージを</br>
+    表示させるとスムーズに開発ができると思います。</br>
+  </p>
+  <h3><span>2.コメントアウトする</span></h3>
+  <p>1行のプログラムコードをコメントアウトしたいときは以下の様なコードを書きます。</br>
+  <code>// コメントアウト</code></br>
+  また、複数行をコメントアウトしたいときは以下のようなコードを書きます。</br>
+  <pre><code><span>/*
+    コメントアウト1 
+    コメントアウト2 
+    */</span></code></pre>
+  </br>
+  必要なくなってしまったコードや、一瞬だけいらないコードなどをいちいち消したり書いたり</br>
+  するのではなく、コメントアウトで無効化すると開発がスムーズに進むと思います。</br>
+  </p>
+  <h3><span>3.変数、定数を宣言する</span></h3>
+  <p>まず、定数を宣言したい場合は以下の様なコードを書きます。</br>
+  <code>const num1</code></br>
+  定数を宣言するときは定数の前に「const」をつけます。</br>
+  また、変数を宣言する時は以下の様なコードを書きます。</br>
+  <code>let num2</code></br>
+  定数や変数は「const」や「let」のあとに定数や変数を書くことで宣言できます。</br>
+  定数は後から値を変更できず、変数は値を変更できます。 定数と変数をうまく使い分けると</br>
+  開発中のミスを減らすことができると思います。</br>
+  また、定数や変数を宣言するときは多くの場合、データの型を明示する必要がありますがJavaScriptでは</br>
+  明示する必要はありません。 これはJavaScriptでは自動的にデータの型を判別してくれるからです。</br>
+  </p>
+  <h3><span>4.条件分岐</span></h3>
+  <p>条件によって処理を変更したい場合、以下のようにプログラムを書きます。</br>
+  <pre><code><span>let num1 = 10;
+    if(num1 == 10){
+      console.log('ok');
+    }else{
+      console.log('no');
+    }
+  </span></code></pre>
+  ()の中に条件を書き、{}の中に処理を書きます。ifに続く{}の中には条件が成立した時、</br>
+  elseに続く{}の中には条件が成立しなかった時の処理を書きます。 つまり上のプログラムでは</br>
+  num1が10の時「ok」を、そうではない時に「no」を表示するわけですね。</br>
+  また、「else」ではなく「else if」と続けることによって条件を追加することもできます。</br>
+</p>
+  <h3><span>5.ループ処理</span></h3>
+  <p>回数を指定してループ処理を行いたい場合以下の様なプログラムを書きます。</br>
+  <pre><code><span>for (let i = 0; i < 10; i++) {
+  console.log(i);
+  }
+</span></code></pre>
+  for文では()の中で条件に使う変数の定義、条件、変数の変更、｛｝のなかで処理を行います。上のプログラムでいうと</br>
+  「let i = 0」で条件用の変数を定義、今回はiという変数を0に定義しています</br>
+  「i < 10;」で条件を定義、今回はiが10未満の時処理を行うということです。</br>
+  最後に「i++」では変数の変更を行っています、「i++」はiに1を足すという構文で、</br>
+  この場合繰り返すたびにiが1ずつ加算されていくという意味です。</br>
+  また、iは繰り返すごとに変更されていくので、上のプログラムでは</br>
+  <pre><code><span>
+    0
+    1
+    2
+    ・
+    ・
+    ・
+    9
+  </span></code></pre>
+  と表示されます。</br>
+  この構文は回数が最初から決まっている時に有効で、10回繰り返すなど繰り返しの回数を</br>
+  指定できるときに使うと便利です。</br>
+  逆にループ処理を条件によって管理したい時や、繰り返す回数が決まっていない時にはwhile文が</br>
+  有効です。</br>
+  <pre><code><span>
+    let num1 = 100;
+
+while (num1 >= 0) {
+  console.log(num1);
+  num1 -= 1;
+}
+  </span></code></pre>
+  while文では()のなかで条件を定義、｛｝のなかで処理を行います。</br>
+  上のプログラムではnum1が0になるまで処理を繰り返すということで、
+  出力は</br>
+  <pre><code><span>
+    100
+    99
+    98
+    ・
+    ・
+    ・
+    1
+    0
+  </span></code></pre>
+  の様になります。 上でも書いた通りこの構文は繰り返しを条件式などによって管理するのに向いています。</br>
+  しかし終了条件をちゃんと記載しないと無限ループになってしまったりと、扱いには注意する必要があります。</p>
+  
+
+  <h2 id="feature"><span>JavaScriptの特徴と得意分野</span></h2>
+  <p>ここではJavaScriptの得意なことや特徴について解説します。
+  <ol>
+    <li class="list">動的サイトの作成が得意!</li>
+    <p class = "list_H3">
+      始めの方でも書きましたが、JavaScriptはHTMLやCSSとの連携が強くWebサイトの作成に向いています。</br>
+      特にWebサイトに動きを付けること、画像にアニメーションを追加したりボタンをクリックしたらページを</br>
+      切り替えることなどが得意です。</br>
+    </p>
+    <li class="list">応用分野が広い!</li>
+    <p class = "list_H3">
+      JavaScriptは応用分野が広いことも特徴です。 ライブラリという拡張機能のようなものを利用する</br>
+      必要はありますがWebサイトに動きを付けることはもちろんゲームの開発や、モバイル・デスクトップアプリの開発、</br>
+      サーバーの作成まで幅広く活用することができます。</br> 
+    </p>
+    <li class="list">学習しやすい!</li>
+    <p class = "list_H3">
+      JavaScriptは学びやすく習得しやすいことも特徴の一つです。 </br>
+      JavaScriptは昔から存在するプログラム言語であり学習に利用できる情報が豊富に手に入ります。</br>
+      また、文法が柔軟であるのも特徴であり、ほかのプログラム言語で必要なことが多いデータ型の指定が</br>
+      必要ないことや、文末の「;」が省略可能であることなどJavaScriptはプログラムを書きやすいです。</br>
+
+
+    </p>
+  </ol>
+  </p>
+
+  <h2 id="uses"><span>JavaScriptが使われているもの</span></h2>
+  <p>下で用いられているアイコン等はそれぞれのサービスをイメージしてAIなどで作成したものです。</br>
+  ご了承ください。</p>
+  <ol>
+    <li class="list">Visual Studio Code（VScode）</li>
+    <p class = "list_H4">
+      <img src="PSc.png" alt="VScodeアイコンらしきもの" width="200" height="200"></br>
+      プログラムを書いたり、小規模の開発に便利なマイクロソフト製エディター、VScodeですが実は</br>
+      JavaScriptが用いられています。 正確にはTypeScriptというJavaScriptの拡張版を用いて</br>
+      開発されているのですが、TypeScriptは最終的にJavaScriptに変換されるので紹介しました。</br>
+      もっと細かく解説するとHTML、 CSSも用いて作成されています。</br>
+    </p>
+    <li class="list">Instagram</li>
+    <p class = "list_H4">
+      <img src="int.jpg" alt="インスタのロゴらしきもの" width="200" height="200"></br>
+      SNSとして幅広い層に人気があるInstagramもJavaScriptが用いられています。</br>
+      正確にはJavaScriptを使用したフレームワークを用いて作成されていて、リアルタイムで更新されるUIを</br>
+      スムーズに更新することに生かされているそうです。</br> 
+    </p>
+    <li class="list">Netflix</li>
+    <p class = "list_H4">
+      <img src="YAT.png" alt="ネトフリのロゴらしきもの" width="200" height="200"></br>
+      動画配信サービスとして有名なNetflixもJavaScriptの一部ライブラリを使用して作成されています。</br>
+      ReactというJavaScriptのライブラリを用いて作成されていて、ビデオの再生など多くの処理を行いながら</br>
+      快適なサービスを提供するのに役立っています。</br></p>
+  </ol>
+  </p>
+
+  <h2 id="conclusion"><span>さいごに</span></h2>
+  <p>
+  今回は有名なプログラミング言語であるJavaScriptについて様々な視点から調べてみました。</br>
+  私自身も知らないことが多かったので今回調べてよかったと思います。</br>
+  今回の内容で、これを読んだ方々の知識が少しでも深まればうれしいです。</br>
+  </br>
+  本コンテンツの作成時間（HTML/CSSの設計・実装を含む）：約11時間</p>
+
+  <h2 id="quotation"><span>参考文献</span></h2>
+  <ul>
+    <li>・Resources for Developers,by Developers JavaScript</li>
+    <p><a href ="https://developer.mozilla.org/ja/docs/Web/JavaScript">→https://developer.mozilla.org/ja/docs/Web/JavaScript</a></p>
+    <li>・JavaScript 基礎文法</li>
+    <p><a href ="https://qiita.com/Fendo181/items/cca476da99e8f09b6b97">→https://qiita.com/Fendo181/items/cca476da99e8f09b6b97</a></p>
+    <li>・JavaScriptでできること10選！具体例つきでわかりやすく解説</li>
+    <p><a href ="https://x-hours.com/articles/12732">→https://x-hours.com/articles/12732</a></p>
+    <li>・JavaScriptを仕事にするには？わかりやすく解説！</li>
+    <p><a href ="https://asikaze.net/media/12487/#JavaScript">→https://asikaze.net/media/12487/#JavaScript</a></p>
+    <li>・InstagramのUIとReact JS：その機能とメリットを徹底解説</li>
+    <p><a href ="https://ecosleek.in/instagrams-ui-with-react-js/">→https://ecosleek.in/instagrams-ui-with-react-js/</a></p>
+    <li>・Microsoft vscode 公式GitHub</li>
+    <p><a href ="https://github.com/microsoft/vscode">→https://github.com/microsoft/vscode</a></p>
+    <li>・How Netflix Uses React to Deliver Seamless Streaming at Scale</li>
+    <p><a href ="https://medium.com/@hritvikom/how-netflix-uses-react-to-deliver-seamless-streaming-at-scale-a4fe42e190cc">→https://medium.com/@hritvikom/how-netflix-uses-react-to-deliver-seamless-streaming-at-scale-a4fe42e190cc</a></p>
+
+  </ul>
+
+
+
+</body>
+</html>
