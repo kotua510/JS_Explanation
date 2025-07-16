@@ -1,1 +1,1 @@
-# JS_Explanation
+# JavaScriptについて解説しているWebページです。
