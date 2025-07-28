@@ -106,7 +106,6 @@ li {
   width: 100%;
   z-index: 1000;
   border-bottom: 2px solid blue;
-  z-index: 2000; 
 }
 
 /* 初期ナビゲーションメニュー */
@@ -137,6 +136,7 @@ li {
   cursor: pointer;
   padding: 10px;
   background-color: #f5f5f5;
+  z-index: 2000; 
 }
 
 /* 画面幅が768px以下の時にレイアウト変更 */
