@@ -146,21 +146,19 @@ li {
 
 /* 画面幅が768px以下の時にレイアウト変更 */
 @media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
   .menu ul {
     display: none;
     flex-direction: column;
     position: fixed;
-    top: 50px;
-    left: 0;
-    width: 100%;
+    top: 50px;     /* メニュー本体の下あたり */
+    right: 10px;   /* 右から10pxの位置に寄せる */
+    width: 200px;  /* メニューの横幅（お好みで調整してください） */
     background-color: #f5f5f5;
     z-index: 1500;
     margin: 0;
     padding: 0;
+    border: 1px solid #ccc; /* 見やすく境界線追加（任意） */
+    border-radius: 4px;     /* 角丸（任意） */
   }
 
   .menu ul.active {
@@ -169,20 +167,26 @@ li {
 
   .menu ul li {
     display: block;
-    text-align: center;
-    padding: 10px 0;
+    text-align: left;  /* 左揃えが自然です */
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd; /* リストの区切り線 */
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none; /* 最後の下線を消す */
   }
 
   .menu ul li a {
     display: block;
-    padding: 10px;
     color: #3498db;
+    text-decoration: none;
   }
 
   .menu ul li a:hover {
     color: #21618c;
   }
 }
+
 
 /* モバイル対応：さらに狭い画面向け */
 @media screen and (max-width: 768px) {
