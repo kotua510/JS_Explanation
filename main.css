@@ -150,19 +150,19 @@ li {
     display: block;
   }
 
-  /* 最初は非表示にしておく */
   .menu ul {
     display: none;
     flex-direction: column;
-    position: relative;
-    z-index: 1000;
-    background-color: #f5f5f5;
+    position: fixed;
+    top: 50px;
+    left: 0;
     width: 100%;
+    background-color: #f5f5f5;
+    z-index: 1500;
     margin: 0;
     padding: 0;
   }
 
-  /* ハンバーガークリックで表示 */
   .menu ul.active {
     display: flex;
   }
@@ -185,7 +185,7 @@ li {
 }
 
 /* モバイル対応：さらに狭い画面向け */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   body {
     padding: 10px;
   }
