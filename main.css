@@ -109,13 +109,14 @@ li {
 }
 
 /* 初期ナビゲーションメニュー */
-.menu ul {
-  display: flex;
-  gap: 1em;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.menu {
   background-color: #f5f5f5;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;    /* ← ハンバーガーより低く */
+  border-bottom: 2px solid blue;
 }
 
 .menu ul li a {
@@ -136,7 +137,11 @@ li {
   cursor: pointer;
   padding: 10px;
   background-color: #f5f5f5;
-  z-index: 2000; 
+
+  position: fixed;   /* ← 画面上に固定 */
+  top: 10px;
+  right: 10px;
+  z-index: 2000;     /* ← メニューより前面 */
 }
 
 /* 画面幅が768px以下の時にレイアウト変更 */
@@ -145,11 +150,10 @@ li {
     display: block;
   }
 
-  .menu ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
+ .menu ul {
+  z-index: 1000;
+  position: relative;  /* ← z-indexを有効にするために追加 */
+}
 
   .menu ul.active {
     display: flex;
