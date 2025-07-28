@@ -151,7 +151,7 @@ li {
     flex-direction: column;
     position: fixed;
     top: 50px;     /* メニュー本体の下あたり */
-    right: 10px;   /* 右から10pxの位置に寄せる */
+    right: 300px;   /* 右から10pxの位置に寄せる */
     width: 200px;  /* メニューの横幅（お好みで調整してください） */
     background-color: #f5f5f5;
     z-index: 1500;
