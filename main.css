@@ -99,14 +99,14 @@ li {
 }
 
 .menu {
-    background-color: #f5f5f5;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 2px solid blue;
-  }
+  background-color: #f5f5f5;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 2px solid blue;
+}
 
 /* 初期ナビゲーションメニュー */
 .menu ul {
@@ -120,9 +120,13 @@ li {
 
 .menu ul li a {
   text-decoration: none;
-  padding: 10px;
-  display: block;
-  color: #333;
+  color: #3498db;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #21618c;
 }
 
 /* ハンバーガーメニュー（初期は非表示） */
@@ -131,6 +135,7 @@ li {
   font-size: 2em;
   cursor: pointer;
   padding: 10px;
+  background-color: #f5f5f5;
 }
 
 /* 画面幅が768px以下の時にレイアウト変更 */
@@ -143,45 +148,14 @@ li {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #f5f5f5;
   }
 
   .menu ul.active {
     display: flex;
   }
-
-  .menu ul li a {
-  text-decoration: none;
-  color: #3498db;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-.menu ul li a:hover {
-  color: #21618c;
-}
 }
 
-.menu ul li a {
-  text-decoration: none;
-  color: #3498db;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-.menu ul li a:hover {
-  color: #21618c;
-}
-
-
-
-
-.menu ul li a:hover {
-  color: #21618c;
-}
-
-
-
-
-/* モバイル対応 */
+/* モバイル対応：さらに狭い画面向け */
 @media screen and (max-width: 600px) {
   body {
     padding: 10px;
@@ -192,6 +166,7 @@ li {
     height: auto;
   }
 }
+
 
 
 
