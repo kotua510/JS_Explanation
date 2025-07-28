@@ -213,12 +213,20 @@ while (num1 >= 0) {
 
   </ul>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("nav-list");
-      nav.classList.toggle("active");
-    }
-  </script>
+ <script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-list");
+    nav.classList.toggle("active");
+  }
+
+  // リンクをクリックしたらメニューを閉じる
+  document.querySelectorAll('#nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('nav-list').classList.remove('active');
+    });
+  });
+</script>
+
 
 
 
