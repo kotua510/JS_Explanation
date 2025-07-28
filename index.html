@@ -12,8 +12,9 @@
   
 </head>
 <body>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
   <nav class="menu">
-  <ul>
+  <ul id="nav-list">
     <li><a href="#intro">JavaScriptとは？</a></li>
     <li><a href="#syntax">基本構文</a></li>
     <li><a href="#feature">特徴と得意分野</a></li>
@@ -211,6 +212,13 @@ while (num1 >= 0) {
     <p><a href ="https://medium.com/@hritvikom/how-netflix-uses-react-to-deliver-seamless-streaming-at-scale-a4fe42e190cc">→https://medium.com/@hritvikom/how-netflix-uses-react-to-deliver-seamless-streaming-at-scale-a4fe42e190cc</a></p>
 
   </ul>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-list");
+      nav.classList.toggle("active");
+    }
+  </script>
 
 
 
